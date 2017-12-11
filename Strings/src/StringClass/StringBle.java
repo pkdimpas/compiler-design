@@ -10,8 +10,26 @@ package StringClass;
  * @author Christian
  */
 public class StringBle {
-    public int length;
+    private int length;
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+    
     public StringBle(String s){
         length = s.length();
     }
+    
+    String toUpper(String s){
+        return s.toUpperCase();
+    }
+    
+    String toLower(String s){
+        return s.toLowerCase();
+    }
+    
 }

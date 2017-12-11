@@ -32,7 +32,7 @@ public class Strings {
             while(sc.hasNextLine()){
                 s = sc.nextLine();
                 sb = new StringBle("hello");
-                System.out.println(sb.length);
+                System.out.println(sb.getLength());
                 System.out.println(s);
             }
         }catch(FileNotFoundException e){

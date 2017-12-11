@@ -8,7 +8,7 @@ package strings;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+import StringClass.StringBle;
 /**
  *
  * @author Cadigal, Dimpas, Gelbolingo, Gimenez, Po
@@ -24,12 +24,15 @@ public class Strings {
             File input;
             Scanner sc;
             String s;
-
+            StringBle sb;
+            
             input = new File("source.ble");
             sc = new Scanner(input);
             
             while(sc.hasNextLine()){
                 s = sc.nextLine();
+                sb = new StringBle("hello");
+                System.out.println(sb.length);
                 System.out.println(s);
             }
         }catch(FileNotFoundException e){

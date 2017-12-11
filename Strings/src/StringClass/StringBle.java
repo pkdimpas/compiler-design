@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package length;
+package StringClass;
 
 /**
  *
  * @author Christian
  */
-public class length {
-    
+public class StringBle {
+    public int length;
+    public StringBle(String s){
+        length = s.length();
+    }
 }

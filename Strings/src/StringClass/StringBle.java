@@ -20,12 +20,16 @@ public class StringBle {
         return val.length();
     }
     
-    String toUpper(){
+    public String toUpper(){
         return val.toUpperCase();
     }
     
-    String toLower(){
+    public String toLower(){
         return val.toLowerCase();
+    }
+    
+    public boolean find(String search){
+        return val.contains(search);
     }
     
 }

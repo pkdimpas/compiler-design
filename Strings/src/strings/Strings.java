@@ -31,9 +31,11 @@ public class Strings {
             
             while(sc.hasNextLine()){
                 s = sc.nextLine();
-                sb = new StringBle("hello");
-                System.out.println(sb.getLength());
-                System.out.println(s);
+                sb = new StringBle("Hello");
+                System.out.println(sb.find("he"));
+                System.out.println(sb.find("ge"));
+                System.out.println(sb.toLower());
+                System.out.println(sb.toUpper());
             }
         }catch(FileNotFoundException e){
             System.out.println(e.getMessage());

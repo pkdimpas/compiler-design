@@ -1,3 +1,4 @@
-print("hello world")
-testing 1 2 3
-"asdasd".length
+	
+Let var = "Hello World!!! 123 .,.; []"
+Let gren = 'Gro' 
+length(var)

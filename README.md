@@ -3,4 +3,4 @@ Compiler Design
 
 Create your own branch
 
-Pull request when you want to merge it to develop branch
+Pull request if ganahan mo i merge sa develop branch

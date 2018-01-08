@@ -1,4 +1,4 @@
-	
-Let var = "Hello World!!! 123 .,.; []"
-Let gren = 'Gro' 
-length(var)
+print("hello world")
+testing 1 2 3
+"asdasd".length
+Let arr = Array()

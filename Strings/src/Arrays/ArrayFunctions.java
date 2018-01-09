@@ -62,7 +62,15 @@ public class ArrayFunctions {
 				
 				break;
 			
-			case ".size": 			break;
+			case ".size": 			
+				// parameters (1) ArrayNAme
+				if(params.length == 1) {
+					returnValue = (memory.containsKey(params[0])) ? size(params,memory) : (String) "Array not found";
+				} else {
+					returnValue = (String) "Invalid Parameters";
+				}
+				
+				break;
 			case ".delete":			break;
 			case ".append":			break;
 			case ".insert": 		break;
@@ -113,6 +121,20 @@ public class ArrayFunctions {
 		
 		
 		return returnValue;
+	}
+	
+	
+	/**
+	 * 
+	 * @param params -> parameters of size function (1) - ArrayName
+	 * @param memory -> memory of compiler
+	 * @return the size of the array
+	 */
+	private Integer size(String[] params, Map<String,Object> memory) {
+		
+		Map<String,Object> array = (Map<String,Object>) memory.get(params[0]);
+		
+		return array.size();
 	}
 	
 }

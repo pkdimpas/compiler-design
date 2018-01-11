@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,8 +21,12 @@ import java.util.regex.Pattern;
  */
 public class ArrayLexicon {
     private ArrayList vars;
+    private ArrayFunctions functions;
+    private Map<String, ArrayBle> memory;
     public ArrayLexicon(){
         vars = new ArrayList();
+        functions = new ArrayFunctions();
+        memory = new HashMap<>();
     }
     public void readSource(String filename){
         BufferedReader br;
@@ -47,10 +53,14 @@ public class ArrayLexicon {
                         m = p.matcher(m.group());
                         if(m.find()){
                             vars.add(m.group());
-                            System.out.println(m.group());
-                        }
+                            ArrayBle array = new ArrayBle();
+                            memory.put(m.group(), array);
+                            System.out.println(m.group());                        }
                     }
-                }else{
+                    
+                }else if (functions.getFunction(line)) {
+                	System.out.println(functions.findFunction(memory));
+            	}else{
                     System.out.println("Wala");
                 }
                 line = br.readLine();
